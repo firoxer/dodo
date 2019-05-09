@@ -1,0 +1,48 @@
+html,
+body,
+main,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow-x: auto;
+}
+
+html {
+  font-size: 32px; /* Defined here for `rem` */
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Text and background colors are set in JS */
+
+main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Remove fugly outlines */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+}
+input,
+button:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  border: 0;
+  border-bottom: .1rem black solid;
+  outline: 0;
+  font: inherit;
+}
+
+/* Center buttons' content even when overflowing */
+button:before {
+  content: "";
+  margin-left: -100%;
+}
+button:after {
+  content: "";
+  margin-right: -100%;
+}

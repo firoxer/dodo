@@ -1,0 +1,18 @@
+.EditHabitFormCancel {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.EditHabitFormCancel button {
+  margin: 1rem;
+}
+
+.EditHabitForm {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+}
+
+.EditHabitForm .OkButton {
+  margin-left: 1rem;
+}

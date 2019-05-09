@@ -1,0 +1,13 @@
+{
+  "background_color": "#000000",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "name": "Dodo",
+  "theme_color": "#000000"
+}

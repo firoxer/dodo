@@ -1,0 +1,71 @@
+.HabitList {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.Habit {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.AddHabitButtonWrapper,
+.Habit header {
+  height: 2rem;
+  line-height: 2rem; /* Same as the height */
+  max-width: 50vw;
+  min-width: 50vw;
+  overflow: hidden;
+  text-align: right;
+}
+
+@media screen and (min-width: 40rem) {
+  .AddHabitButtonWrapper {
+    min-width: auto;
+    width: 10rem;
+  }
+
+  .Habit header {
+    min-width: 10rem;
+  }
+}
+
+.Habit header {
+  padding-right: 1rem;
+}
+
+.Habit button {
+  margin-left: .125rem;
+  margin-right: .125rem;
+}
+
+.Habit button.check svg {
+  fill: hsl(0, 0%, 100%);
+}
+.Habit button.check.checked svg {
+  fill: hsl(0, 0%, 0%);
+}
+
+/* Today's checks */
+.Habit button.check:first-of-type {
+  border-color: hsl(0, 0%, 0%);
+}
+
+/* Hover effects are only enabled on desktop devices because they look ugly with touch */
+@media (hover: hover) {
+  .Habit header:hover {
+    color: hsl(0, 0%, 70%);
+    cursor: pointer;
+  }
+
+  .Habit button.check:disabled:hover {
+    border-color: hsl(0, 0%, 100%);
+    cursor: default;
+  }
+
+  .Habit button.check:not(:disabled):hover {
+    border-color: hsl(0, 0%, 70%);
+    cursor: pointer;
+  }
+}

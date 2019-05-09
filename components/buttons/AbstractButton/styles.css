@@ -1,0 +1,24 @@
+.AbstractButton {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  border: .15rem solid hsl(0, 0%, 100%);
+  color: inherit; /* Override button behaviour */
+  font: inherit;
+  height: 2rem;
+  padding: 0; /* Override button behaviour */
+  width: 2rem;
+}
+
+.AbstractButton svg {
+  fill: hsl(0, 0%, 0%);
+  height: 100%;
+  transform: scale(0.5);
+}
+
+/* Hover effects are only enabled on desktop devices because they look ugly with touch */
+@media (hover: hover) {
+  .AbstractButton:hover {
+    border: .15rem solid hsl(0, 0%, 70%);
+    cursor: pointer;
+  }
+}

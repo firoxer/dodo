@@ -1,0 +1,18 @@
+.AddHabitFormCancel {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.AddHabitFormCancel button {
+  margin: 1rem;
+}
+
+.AddHabitForm {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+}
+
+.AddHabitForm .PlusButton {
+  margin-left: 1rem;
+}
