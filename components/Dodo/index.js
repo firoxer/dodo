@@ -47,17 +47,22 @@ export default function Dodo({ habitStore }) {
     setHabits(habitStore.toggleHabitCheckTime(habitName, time));
   };
 
+  const resumeViewing = () => {
+    setEditedHabitName(null);
+    setMode(MODE_VIEW);
+  };
+
   switch (mode) {
     case MODE_ADD:
       return html`
-        <${AddHabitForm} onAdd=${addHabit} onCancel=${startAddingHabit} />
+        <${AddHabitForm} onAdd=${addHabit} onCancel=${resumeViewing} />
       `;
 
     case MODE_EDIT:
       return html`
         <${EditHabitForm}
           name=${editedHabitName}
-          onCancel=${startAddingHabit}
+          onCancel=${resumeViewing}
           onEdit=${renameHabit}
           onRemove=${removeHabit}
         />
