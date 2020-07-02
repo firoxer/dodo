@@ -1,6 +1,11 @@
 .EditHabitFormCancel {
   flex-grow: 1;
-  height: 100%;
+}
+
+@media (min-width: 800px) {
+  .EditHabitFormCancel {
+    height: 100%;
+  }
 }
 
 .EditHabitFormCancel button {
@@ -11,6 +16,15 @@
   display: flex;
   flex-direction: row;
   flex-grow: 2;
+}
+
+.EditHabitFormInputWrapper {
+  margin-left: 1rem;
+  /* .OkButton takes care of the right margin */
+}
+
+.EditHabitForm input {
+  width: 100%;
 }
 
 .EditHabitForm .OkButton {

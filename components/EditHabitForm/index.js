@@ -17,18 +17,20 @@ export default function EditHabitForm(props) {
     props.onRemove(props.name);
   };
 
-  return [
-    html`
-      <div className="EditHabitFormCancel">
-        <${LeftArrowButton} onClick=${props.onCancel} />
-      </div>
-    `,
-    html`
-      <form className="EditHabitForm" onSubmit=${onSubmit}>
+  // The input is wrapped in a div to prevent it from stretching like a flex item
+  return html`
+    <div className="EditHabitFormCancel">
+      <${LeftArrowButton} onClick=${props.onCancel} />
+    </div>
+
+    <form className="EditHabitForm" onSubmit=${onSubmit}>
+      <div className="EditHabitFormInputWrapper">
         <input autoFocus defaultValue=${props.name} maxLength="24" ref=${inputRef} type="text" />
-        <${OkButton} onClick=${onSubmit} />
-        <${CrossButton} onClick=${onRemove} />
-      </form>
-    `,
-  ];
+      </div>
+
+      <${OkButton} onClick=${onSubmit} />
+
+      <${CrossButton} onClick=${onRemove} />
+    </form>
+  `;
 }

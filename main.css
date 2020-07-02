@@ -20,6 +20,12 @@ main {
   justify-content: center;
 }
 
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+}
+
 /* Remove fugly outlines */
 input::-moz-focus-inner,
 button::-moz-focus-inner {

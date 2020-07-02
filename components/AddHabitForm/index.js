@@ -12,13 +12,17 @@ export default function AddHabitForm(props) {
     props.onAdd(inputRef.current.value);
   };
 
+  // The input is wrapped in a div to prevent it from stretching like a flex item
   return html`
     <div key="cancel" className="AddHabitFormCancel">
       <${LeftArrowButton} onClick=${props.onCancel} />
     </div>
 
     <form key="add" className="AddHabitForm" onSubmit=${onSubmit}>
-      <input autoFocus maxLength="24" ref=${inputRef} type="text" />
+      <div className="AddHabitFormInputWrapper">
+        <input autoFocus maxLength="24" ref=${inputRef} type="text" />
+      </div>
+
       <${PlusButton} onClick=${onSubmit} />
     </form>
   `;

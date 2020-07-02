@@ -1,6 +1,11 @@
 .AddHabitFormCancel {
   flex-grow: 1;
-  height: 100%;
+}
+
+@media (min-width: 800px) {
+  .AddHabitFormCancel {
+    height: 100%;
+  }
 }
 
 .AddHabitFormCancel button {
@@ -11,6 +16,15 @@
   display: flex;
   flex-direction: row;
   flex-grow: 2;
+}
+
+.AddHabitFormInputWrapper {
+  margin-left: 1rem;
+  /* .OkButton takes care of the right margin */
+}
+
+.AddHabitForm input {
+  width: 100%;
 }
 
 .AddHabitForm .PlusButton {
