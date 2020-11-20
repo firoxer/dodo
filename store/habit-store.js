@@ -1,3 +1,8 @@
+function removeOldCheckTimes(habit) {
+  const oneMonthAgo = new Date().valueOf() - 30 * 24 * 60 * 60 * 1000;
+  return habit.checkTimes.filter((checkTime) => checkTime > oneMonthAgo);
+}
+
 export default class HabitStore {
   constructor(getFromPersistentStore, setToPersistentStore) {
     this.getFromPersistentStore = getFromPersistentStore;
@@ -5,6 +10,10 @@ export default class HabitStore {
 
     try {
       this.habits = getFromPersistentStore() || [];
+
+      for (const habit of this.habits) {
+        habit.checkTimes = removeOldCheckTimes(habit);
+      }
     } catch {
       this.habits = [];
     }
