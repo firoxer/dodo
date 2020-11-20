@@ -28,28 +28,28 @@ export default function Dodo({ habitStore }) {
     setEditedHabitName(habitName);
   };
 
+  const resumeViewing = () => {
+    setEditedHabitName(null);
+    setMode(MODE_VIEW);
+  };
+
   const addHabit = (name) => {
-    startAddingHabit();
     setHabits(habitStore.addHabit(name));
+    resumeViewing();
   };
 
   const removeHabit = (name) => {
-    startAddingHabit();
     setHabits(habitStore.removeHabit(name));
+    resumeViewing();
   };
 
   const renameHabit = (newName) => {
-    startAddingHabit();
     setHabits(habitStore.renameHabit(editedHabitName, newName));
+    resumeViewing();
   }
 
   const toggleHabitCheckTime = (habitName, time) => {
     setHabits(habitStore.toggleHabitCheckTime(habitName, time));
-  };
-
-  const resumeViewing = () => {
-    setEditedHabitName(null);
-    setMode(MODE_VIEW);
   };
 
   switch (mode) {

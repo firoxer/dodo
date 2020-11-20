@@ -69,6 +69,8 @@ export default class HabitStore {
 
     renamedHabit.name = newName;
 
+    this.setToPersistentStore(this.habits);
+
     return this.getAll();
   }
 
