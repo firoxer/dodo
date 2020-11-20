@@ -38,7 +38,7 @@ button:focus {
 
 input[type="text"] {
   border: 0;
-  border-bottom: .1rem black solid;
+  border-bottom: .15rem black solid;
   outline: 0;
   font: inherit;
 }
